@@ -17,7 +17,7 @@ class EmployeeServiceTest {
             mocked.when(EmployeeRepository::getInstance).thenReturn(repository);
 
             var employeeService = new EmployeeService();
-            System.out.println(employeeService.findAll());
+            assertEquals(List.of("JOHN", "JACK"), employeeService.findAll());
         }
     }
 }
